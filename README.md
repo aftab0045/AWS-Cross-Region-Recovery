@@ -26,16 +26,8 @@ The infrastructure was deployed using:
 ---
 
 
-![](./img/Screenshot%202026-05-27%20183950.png)
-![](./img/Screenshot%202026-05-27%20184313.png)
-![](./img/Screenshot%202026-05-27%20191746.png)
-![](./img/Screenshot%202026-05-27%20191819.png)
-![](./img/Screenshot%202026-05-27%20191956.png)
-![](./img/Screenshot%202026-05-27%20193512.png)
-![](./img/Screenshot%202026-05-27%20193633.png)
-![](./img/Screenshot%202026-05-27%20194038.png)
-![](./img/Screenshot%202026-05-27%20194113.png)
-![](./img/Screenshot%202026-05-27%20195032.png)
+
+
 # Architecture Overview
 ![](./img/Architect%20Dig.png)
 ## Primary Region
@@ -354,6 +346,8 @@ disaster-recovery-vault
 ```
 
 ![](./img/Screenshot%202026-05-27%20183144.png)
+
+
 ---
 
 # Step 9 — Create Backup Plan
@@ -377,6 +371,11 @@ ec2-cross-region-backup-plan
 | Completion Window | 7 Days |
 | Retention | 120 Days |
 
+
+![](./img/Screenshot%202026-05-27%20183439.png)
+
+![](./img/Screenshot%202026-05-27%20183641.png)
+
 ---
 
 # Step 10 — Configure Cross-Region Replication
@@ -391,6 +390,8 @@ ec2-cross-region-backup-plan
 
 This configuration automatically replicates recovery points to the disaster recovery region.
 
+![](./img/Screenshot%202026-05-27%20183950.png)
+
 ---
 
 # Step 11 — Assign EC2 Resource
@@ -402,6 +403,8 @@ This configuration automatically replicates recovery points to the disaster reco
 | Assignment Name | ec2-assignment |
 | Resource Type | EC2 |
 | Assigned Instance | Backup-Demo-Server |
+
+![](./img/Screenshot%202026-05-27%20183620.png)
 
 ---
 
@@ -416,6 +419,8 @@ Created an on-demand backup manually to test:
 - AWS Backup integration
 - Initial backup verification
 
+![](./img/Screenshot%202026-05-27%20184313.png)
+
 ---
 
 ## Verified Backup Job
@@ -425,6 +430,9 @@ Verified:
 ```text
 Backup Jobs → Completed
 ```
+
+![](./img/Screenshot%202026-05-27%20191819.png)
+
 
 ---
 
@@ -461,6 +469,9 @@ Verified:
 Copy Jobs → Completed
 ```
 
+![](./img/Screenshot%202026-05-27%20204653.png)
+
+
 This confirmed successful cross-region disaster recovery replication.
 
 ---
@@ -481,6 +492,7 @@ This confirmed:
 - Cross-region backup replication
 - Recovery point synchronization
 
+![](./img/Screenshot%202026-05-27%20204851.png)
 ---
 
 # Step 15 — Disaster Recovery Restore Testing
@@ -496,6 +508,12 @@ Restore testing validated:
 - Cross-region restoration
 - EC2 recovery workflow
 
+![](./img/Screenshot%202026-05-27%20193512.png)
+
+
+
+![](./img/Screenshot%202026-05-27%20195032.png)
+![](./img/Screenshot%202026-05-27%20204631.png)
 ---
 
 ## Restore Issue Encountered
@@ -524,6 +542,8 @@ Resolved the issue by:
 
 Connected to restored EC2 instance:
 
+![](./img/Screenshot%202026-05-27%20193633.png)
+
 ```bash
 ssh -i backup-key.pem ubuntu@RESTORED_PUBLIC_IP
 ```
@@ -542,6 +562,7 @@ Expected output:
 customers.txt
 payment.txt
 ```
+![](./img/Screenshot%202026-05-27%20194113.png)
 
 ---
 
@@ -552,6 +573,7 @@ Opened restored application:
 ```text
 http://RESTORED_PUBLIC_IP
 ```
+![](./img/Screenshot%202026-05-27%20194038.png)
 
 Verified:
 
@@ -561,38 +583,6 @@ Verified:
 
 ---
 
-# Screenshots Included
-
-## Infrastructure
-
-- EC2 Running Instance
-- Security Group Rules
-- Apache Dashboard
-- Interactive Validation Button
-
----
-
-## AWS Backup
-
-- Backup Vaults
-- Backup Plan
-- Backup Rule
-- Copy Configuration
-- Backup Jobs
-- Copy Jobs
-- Recovery Points
-
----
-
-## Disaster Recovery
-
-- Singapore Recovery Point
-- Restore Job
-- Restored EC2 Instance
-- Validation Testing
-- Restored Dashboard
-
----
 
 # Common Issues Faced
 
@@ -657,16 +647,7 @@ Successfully implemented:
 
 ---
 
-# Resume Description
 
-```text
-Implemented a cross-region disaster recovery solution using AWS Backup and Amazon EC2 with automated backup scheduling, recovery point replication, lifecycle management, and restoration testing between North Virginia and Singapore regions. The project included backup vault configuration, encrypted EBS recovery, disaster recovery validation, and an interactive monitoring dashboard hosted on Apache.
-```
+![](./img/Screenshot%202026-05-27%20191956.png)
 
----
-
-# Author
-
-## Aftab Attar
-
-AWS Backup Cross-Region Disaster Recovery Project
+![](./img/Screenshot%202026-05-27%20191746.png)
