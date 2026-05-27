@@ -449,6 +449,7 @@ The scheduled backup automatically:
 - Triggered cross-region replication
 - Generated recovery points in Singapore
 
+![](./img/Screenshot%202026-05-27%20195032.png)
 ---
 
 ## Verified Automatic Backup
@@ -512,8 +513,8 @@ Restore testing validated:
 
 
 
-![](./img/Screenshot%202026-05-27%20195032.png)
-![](./img/Screenshot%202026-05-27%20204631.png)
+
+
 ---
 
 ## Restore Issue Encountered
@@ -647,7 +648,3 @@ Successfully implemented:
 
 ---
 
-
-![](./img/Screenshot%202026-05-27%20191956.png)
-
-![](./img/Screenshot%202026-05-27%20191746.png)
