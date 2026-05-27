@@ -25,8 +25,19 @@ The infrastructure was deployed using:
 
 ---
 
-# Architecture Overview
 
+![](./img/Screenshot%202026-05-27%20183950.png)
+![](./img/Screenshot%202026-05-27%20184313.png)
+![](./img/Screenshot%202026-05-27%20191746.png)
+![](./img/Screenshot%202026-05-27%20191819.png)
+![](./img/Screenshot%202026-05-27%20191956.png)
+![](./img/Screenshot%202026-05-27%20193512.png)
+![](./img/Screenshot%202026-05-27%20193633.png)
+![](./img/Screenshot%202026-05-27%20194038.png)
+![](./img/Screenshot%202026-05-27%20194113.png)
+![](./img/Screenshot%202026-05-27%20195032.png)
+# Architecture Overview
+![](./img/Architect%20Dig.png)
 ## Primary Region
 
 - North Virginia (`us-east-1`)
@@ -77,26 +88,6 @@ Contains:
 
 ---
 
-# Project Architecture Flow
-
-```text
-EC2 Instance (North Virginia)
-        ↓
-AWS Backup Plan
-        ↓
-Primary Backup Vault
-        ↓
-Cross-Region Copy
-        ↓
-Singapore Backup Vault
-        ↓
-Recovery Point
-        ↓
-Restore EC2 Instance
-```
-
----
-
 # Step 1 — Launch EC2 Instance
 
 ## Open EC2 Console
@@ -135,6 +126,10 @@ SSH source configured as:
 ```text
 My IP
 ```
+
+
+![](./img/Screenshot%202026-05-27%20181316.png)
+
 
 ---
 
@@ -179,6 +174,7 @@ sudo systemctl enable apache2
 ```bash
 sudo systemctl start apache2
 ```
+![](./img/Screenshot%202026-05-27%20181303.png)
 
 ---
 
@@ -220,6 +216,8 @@ Region: Bangalore
 Subscription: Standard
 ```
 
+![](./img/Screenshot%202026-05-27%20182249.png)
+
 ---
 
 ## Create payment.txt
@@ -246,6 +244,7 @@ Customer: John Mathew
 Amount: ₹7,500
 Status: Pending
 ```
+![](./img/Screenshot%202026-05-27%20182224.png)
 
 ---
 
@@ -283,6 +282,7 @@ Open browser:
 ```text
 http://YOUR_PUBLIC_IP
 ```
+![](./img/Screenshot%202026-05-27%20182450.png)
 
 Verified:
 
@@ -301,6 +301,7 @@ Created role:
 ```text
 AWSBackupDefaultServiceRole
 ```
+![](./img/Screenshot%202026-05-27%20182608.png)
 
 ---
 
@@ -311,6 +312,9 @@ AWSBackupDefaultServiceRole
 | AWSBackupServiceRolePolicyForBackup |
 | AWSBackupServiceRolePolicyForRestores |
 
+![](./img/Screenshot%202026-05-27%20182659.png)
+
+![](./img/Screenshot%202026-05-27%20182754.png)
 ---
 
 # Step 8 — Create Backup Vaults
@@ -329,6 +333,10 @@ North Virginia (us-east-1)
 primary-backup-vault
 ```
 
+![](./img/Screenshot%202026-05-27%20183006.png)
+
+![](./img/Screenshot%202026-05-27%20183022.png)
+
 ---
 
 ## Destination Vault
@@ -345,6 +353,7 @@ Singapore (ap-southeast-1)
 disaster-recovery-vault
 ```
 
+![](./img/Screenshot%202026-05-27%20183144.png)
 ---
 
 # Step 9 — Create Backup Plan
