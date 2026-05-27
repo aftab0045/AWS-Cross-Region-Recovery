@@ -1,0 +1,17 @@
+Customer ID: CUST-1001
+Name: Rahul Sharma
+Email: rahul.sharma@example.com
+Region: Mumbai
+Subscription: Premium
+
+Customer ID: CUST-1002
+Name: Aisha Khan
+Email: aisha.khan@example.com
+Region: Pune
+Subscription: Enterprise
+
+Customer ID: CUST-1003
+Name: John Mathew
+Email: john.mathew@example.com
+Region: Bangalore
+Subscription: Standard
