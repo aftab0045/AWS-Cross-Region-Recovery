@@ -1,0 +1,14 @@
+Transaction ID: TXN-9001
+Customer: Rahul Sharma
+Amount: ₹12,500
+Status: Successful
+
+Transaction ID: TXN-9002
+Customer: Aisha Khan
+Amount: ₹28,000
+Status: Successful
+
+Transaction ID: TXN-9003
+Customer: John Mathew
+Amount: ₹7,500
+Status: Pending
