@@ -26,7 +26,6 @@ The infrastructure was deployed using:
 ---
 
 
-
 # Architecture Overview
 ![](./img/Architect%20Dig.png)
 ## Primary Region
